@@ -1,27 +1,15 @@
 {
-    "name": "login-2",
-    "version": "1.0.0",
-    "description": "",
-    "homepage": "https://github.com/porysha/SingIn#readme",
-    "bugs": {
-        "url": "https://github.com/porysha/SingIn/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/porysha/SingIn.git"
-    },
-    "license": "ISC",
-    "author": "",
-    "type": "commonjs",
-    "main": "tailwind.config.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "npx tailwindcss -i ./public/input.css -o ./public/style/main.css "
-    },
-    "keywords": [],
     "devDependencies": {
         "autoprefixer": "^10.4.21",
-        "postcss": "^8.5.4",
-        "tailwindcss": "^4.1.8"
+        "postcss": "^8.5.3",
+        "tailwindcss": "^3.4.1"
+    },
+    "scripts": {
+        "dev": "npx tailwindcss -i ./public/input.css -o ./public/style/main.css --watch",
+        "build": "npx tailwindcss -i ./public/input.css -o ./public/style/main.css"
+    },
+    "dependencies": {
+        "@tailwindcss/postcss": "^4.0.0-alpha.13",
+        "jalali-moment": "^3.3.11"
     }
 }
