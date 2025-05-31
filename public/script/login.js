@@ -23,3 +23,23 @@ function btnHandler(e) {
         alert("لطفا اطلاعات را درست وارد کنید!!!");
     }
 }
+function getCookie(cookieName) {
+    let cookieArr = document.cookie.split(";");
+
+    let thisCookie = null;
+    cookieArr.some((cookie) => {
+        if (cookie.includes(cookieName)) {
+            thisCookie = cookie.substring(cookie.indexOf("=") + 1);
+            return true;
+        }
+    });
+    return thisCookie;
+}
+window.addEventListener("load", (e) => {
+    let isLog = getCookie("email");
+    if (isLog) {
+        location.href = "http://localhost:3000/public/main.html";
+    } else {
+        console.log("ثبت نام انجام نشد");
+    }
+});
