@@ -1,3 +1,13 @@
+let btn = document.querySelector(".Btn");
+function deleteCookie(name) {
+    document.cookie =
+        name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
+btn.addEventListener("click", () => {
+    deleteCookie("email");
+    location.reload();
+});
 function getCookie(cookieName) {
     let cookieArr = document.cookie.split(";");
 
@@ -10,11 +20,12 @@ function getCookie(cookieName) {
     });
     return thisCookie;
 }
+
 window.addEventListener("load", (e) => {
     let isLog = getCookie("email");
     if (!isLog) {
         console.log("ثبت نام انجام نشد");
-        location.href = "/login.html";
+        location.href = "http://localhost:3000/public/login.html";
     } else {
         console.log("ثبت نام انجام شد");
     }
