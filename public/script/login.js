@@ -14,7 +14,7 @@ function btnHandler(e) {
         let extoday = now.setTime(now.getTime() + 2 * 24 * 60 * 1000);
         document.cookie = `email=${email.value};path=/;expires=${extoday}`;
 
-        location.href = "http://localhost:3000/public/main.html";
+        location.href = "page/main.html"; 
 
         email.value = "";
         password.value = "";
