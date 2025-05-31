@@ -1,4 +1,4 @@
-console.log('Index Run Shod..')
+console.log('Index Run Shod. .')
 let btn = document.querySelector(".Btn");
 function deleteCookie(name) {
     document.cookie =
