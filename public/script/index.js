@@ -26,7 +26,7 @@ window.addEventListener("load", (e) => {
     let isLog = getCookie("email");
     if (!isLog) {
         console.log("ثبت نام انجام نشد");
-        location.href = "index.html";
+        location.href = "../index.html";
     } else {
         console.log("ثبت نام انجام شد");
     }
